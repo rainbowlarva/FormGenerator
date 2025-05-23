@@ -1,0 +1,144 @@
+
+/* === MODE DEFINITIONS === */
+body.mode-dark {
+  --background-color: #212121;
+  --text-color: #ffffff;
+  --container-bg: #2A2E33;
+  --input-bg: #5D6770;
+  --border-color: #545454;
+}
+
+body.mode-light {
+  --background-color: #f4f4f4;
+  --text-color: #111111;
+  --container-bg: #ffffff;
+  --input-bg: #e0e0e0;
+  --border-color: #cccccc;
+}
+
+/* === COLOR THEMES === */
+.theme-red {
+  --primary-accent: #AF0000;
+  --button-hover: #8B0000;
+  --header-color: #FF4D4D;
+}
+.theme-green {
+  --primary-accent: #006D2E;
+  --button-hover: #005220;
+  --header-color: #00C851;
+}
+.theme-blue {
+  --primary-accent: #0094FF;
+  --button-hover: #0066CC;
+  --header-color: #33B5E5;
+}
+.theme-orange {
+  --primary-accent: #FF6600;
+  --button-hover: #CC5200;
+  --header-color: #FF8800;
+}
+.theme-yellow {
+  --primary-accent: #FFD700;
+  --button-hover: #E6C200;
+  --header-color: #FFEB3B;
+}
+.theme-purple {
+  --primary-accent: #6A1B9A;
+  --button-hover: #4A148C;
+  --header-color: #AB47BC;
+}
+.theme-pink {
+  --primary-accent: #EC407A;
+  --button-hover: #D81B60;
+  --header-color: #F06292;
+}
+.theme-teal {
+  --primary-accent: #008080;
+  --button-hover: #006666;
+  --header-color: #4DB6AC;
+}
+.theme-cyan {
+  --primary-accent: #00BCD4;
+  --button-hover: #0097A7;
+  --header-color: #26C6DA;
+}
+.theme-brown {
+  --primary-accent: #8D6E63;
+  --button-hover: #5D4037;
+  --header-color: #A1887F;
+}
+.theme-grey {
+  --primary-accent: #757575;
+  --button-hover: #616161;
+  --header-color: #BDBDBD;
+}
+.theme-black {
+  --primary-accent: #212121;
+  --button-hover: #000000;
+  --header-color: #424242;
+}
+.theme-white {
+  --primary-accent: #F5F5F5;
+  --button-hover: #E0E0E0;
+  --header-color: #B0BEC5;
+}
+.theme-gold {
+  --primary-accent: #D4AF37;
+  --button-hover: #B8860B;
+  --header-color: #FFD700;
+}
+.theme-navy {
+  --primary-accent: #001F3F;
+  --button-hover: #001433;
+  --header-color: #004080;
+}
+
+/* === BASE STYLES (USE VARIABLES) === */
+body {
+  font-family: sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 2rem;
+}
+
+.container {
+  background-color: var(--container-bg);
+  padding: 20px;
+  margin: auto;
+  max-width: 900px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+input, textarea, select {
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: var(--primary-accent);
+  color: var(--text-light, white);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
+
+h1, h2 {
+  color: var(--header-color);
+}
+
+textarea {
+  resize: vertical;
+}

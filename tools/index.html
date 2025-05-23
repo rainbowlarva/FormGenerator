@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Config Builder</title>
+  <link rel="stylesheet" href="css/builder.css" />
+</head>
+<body>
+  <div id="app">
+    <h1>Generator Config Builder</h1>
+    <div class="controls">
+      <label>Title: <input type="text" id="formTitle" /></label>
+      <label>Theme:
+        <select id="themeSelect">
+          <option>blue</option><option>green</option><option>red</option>
+          <option>orange</option><option>purple</option><option>navy</option>
+        </select>
+      </label>
+      <label>Mode:
+        <select id="modeSelect">
+          <option>dark</option><option>light</option>
+        </select>
+      </label>
+      <label>Output Format:
+        <select id="formatSelect">
+          <option>bbcode</option><option>html</option>
+        </select>
+      </label>
+    </div>
+
+    <hr />
+
+    <div class="field-builder">
+      <h2>Add Field</h2>
+      <label>Label: <input type="text" id="fieldLabel" /></label>
+      <label>ID: <input type="text" id="fieldId" /></label>
+      <label>Type:
+        <select id="fieldType">
+          <option>text</option><option>textarea</option><option>repeatable</option>
+          <option>dropdown</option><option>checkbox-group</option><option>radio-group</option>
+          <option>checkbox-other</option>
+        </select>
+      </label>
+      <label>Group: <input type="text" id="fieldGroup" /></label>
+      <label>Output Format: <input type="text" id="fieldOutput" placeholder="[b]{value}[/b]" /></label>
+      <button id="addField">Add Field</button>
+    </div>
+
+    <hr />
+
+    <h2>Current Fields</h2>
+    <ul id="fieldList"></ul>
+
+    <hr />
+
+    <h2>Generated Config</h2>
+    <textarea id="configOutput" rows="15" readonly></textarea>
+    <button id="copyConfig">Copy Config</button>
+  </div>
+  <script type="module" src="js/builder.js"></script>
+</body>
+</html>
