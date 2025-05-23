@@ -1,7 +1,9 @@
 import example from "../generators/example.js";
+import fullTest from "../generators/full-feature-generator.js";
 
 const generators = {
-  example
+  example,
+  fullTest
 };
 
 const gen = new URLSearchParams(window.location.search).get("gen");
