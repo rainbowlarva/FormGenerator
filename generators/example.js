@@ -8,20 +8,20 @@ export default {
       id: "name",
       label: "Name",
       type: "text",
-      output: (val) => `[b]Name:[/b] ${val}`
+      output: "[b]Name:[/b] {value}"
     },
     {
       id: "notes",
       label: "Notes",
       type: "textarea",
-      output: (val) => `[i]${val}[/i]`
+      output: "[i]{value}[/i]"
     },
     {
       id: "tags",
       label: "Tags",
       type: "repeatable",
       subtype: "text",
-      output: (val) => `[tag]${val}[/tag]`
+      output: "[tag]{value}[/tag]"
     }
   ]
 };

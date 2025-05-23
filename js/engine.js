@@ -173,7 +173,7 @@ export default function initGenerator(config) {
       if (field.type === 'repeatable') {
         return val.map(v => field.output(v)).join('\n');
       } else {
-        return field.output(val);
+        return typeof field.output === 'string' ? field.output.replace('{value}', val) : field.output(val);
       }
     }).join('\n\n');
 
