@@ -1,9 +1,11 @@
 import example from "../generators/example.js";
 import fullTest from "../generators/full-feature-generator.js";
+import sangang from "../generators/sangang.js";
 
 const generators = {
   example,
-  fullTest
+  fullTest,
+  sangang
 };
 
 const gen = new URLSearchParams(window.location.search).get("gen");
