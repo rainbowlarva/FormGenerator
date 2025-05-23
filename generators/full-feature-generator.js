@@ -1,7 +1,7 @@
 export default {
   title: "Full Feature Test Generator",
-  theme: "orange",
-  mode: "light",
+  theme: "red",
+  mode: "dark",
   outputFormat: "bbcode",
 
   fields: [
