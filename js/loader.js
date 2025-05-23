@@ -4,13 +4,12 @@ const generators = {
   example
 };
 
-const urlParams = new URLSearchParams(window.location.search);
-const gen = urlParams.get("gen");
+const gen = new URLSearchParams(window.location.search).get("gen");
 
 if (gen && generators[gen]) {
   import('./engine.js').then(engine => {
     engine.default(generators[gen]);
   });
 } else {
-  window.location.href = "./home/home.html";
+  document.getElementById("form-container").innerText = "No generator selected or invalid name in ?gen=...";
 }
